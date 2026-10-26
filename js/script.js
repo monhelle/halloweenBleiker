@@ -1,13 +1,33 @@
-// hvis man ønsker at man skal ha 
-// mulighet til å spille av lyden via knapp også
-
+// Nettlesere blokkerer lyd før bruker har klikket/trykt
 const audio = document.getElementById("scary-audio");
 const playBtn = document.getElementById("play-sound");
 
 function playScarySound() {
-  audio.play();
+  if (!audio) return;
+
+  const playPromise = audio.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(function () {
+      // Autoplay blokkert — venter på klikk
+    });
+  }
 }
 
-window.addEventListener("load", playScarySound);
+function toggleSound() {
+  if (!audio) return;
+
+  if (audio.paused) {
+    playScarySound();
+  } else {
+    audio.pause();
+  }
+}
+
 document.body.addEventListener("click", playScarySound, { once: true });
-playBtn.addEventListener("click", playScarySound);
+
+if (playBtn) {
+  playBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+    toggleSound();
+  });
+}
