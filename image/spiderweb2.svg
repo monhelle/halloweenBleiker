@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Radial lines from corner -->
+  <path d="M0 0 L100 0" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M0 0 L100 35" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M0 0 L100 70" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M0 0 L70 100" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M0 0 L35 100" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M0 0 L0 100" stroke="#ffffff" stroke-width="1.2"/>
+
+  <!-- Web arcs -->
+  <path d="M18 0 Q16 16 0 18" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M36 0 Q32 32 0 36" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M54 0 Q48 48 0 54" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M72 0 Q64 64 0 72" stroke="#ffffff" stroke-width="1.2"/>
+  <path d="M90 0 Q80 80 0 90" stroke="#ffffff" stroke-width="1.2"/>
+</svg>

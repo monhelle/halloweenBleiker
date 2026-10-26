@@ -1,0 +1,272 @@
+@font-face {
+  font-family: "Creepster";
+  src: url("../fonts/Creepster-Regular.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background-color: #0a0a0a;
+}
+
+.page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  min-height: 90vh;
+  padding: 1.5rem 2rem 2rem;
+  background-color: #141414;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Edderkoppnett i hjørnene (SVG = samme geometri som de gamle gradientene) */
+.web {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  opacity: 0.35;
+  background-image: url("../image/spiderweb2.svg");
+}
+
+.web-tl {
+  top: 0;
+  left: 0;
+}
+
+.web-tr {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+}
+
+.web-bl {
+  bottom: 0;
+  left: 0;
+  transform: scaleY(-1);
+}
+
+.web-br {
+  bottom: 0;
+  right: 0;
+  transform: scale(-1);
+}
+
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  z-index: 1;
+}
+
+.logo {
+  font-family: "Creepster", cursive;
+  font-size: 2rem;
+  color: #ffd700;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: #c8c8c8;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  color: #ffd700;
+}
+
+.sound-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffd700;
+  color: #000000;
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.sound-btn:hover {
+  background-color: #ffffff;
+}
+
+/* Main */
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2rem;
+  z-index: 1;
+}
+
+/* Hero — tekst venstre, bilde høyre */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex: 1;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  flex: 1 1 45%;
+}
+
+.dato {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b8b8b8;
+}
+
+.hero-text h1 {
+  font-family: "Creepster", cursive;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+.hero-text h1 span {
+  color: #ffd700;
+  display: inline-block;
+}
+
+.ingress {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #d0d0d0;
+  max-width: 380px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.85rem 1.6rem;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border: 2px solid #ffd700;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffd700;
+  color: #000000;
+}
+
+.btn-link {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+
+.btn-link:hover {
+  color: #ffffff;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 45%;
+  min-height: 280px;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 20px;
+  filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.25));
+}
+
+.feature-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  /* flex: 1; */
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.4rem;
+  flex: 1;
+  min-height: 130px;
+  padding: 1.25rem;
+  background: linear-gradient(160deg, #000000 0%, #1a001a 100%);
+  border-radius: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #0b000c;
+}
+
+.feature-card:hover {
+  border-color: #510077;
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.2);
+}
+
+.feature-card h3 {
+  font-family: "Creepster", cursive;
+  font-size: 1.8rem;
+  color: #ffd700;
+  font-weight: normal;
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: #d0d0d0;
+  line-height: 1.4;
+}
+
+
+
